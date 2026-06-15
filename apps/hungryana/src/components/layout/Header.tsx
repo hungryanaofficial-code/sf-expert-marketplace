@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
-import { NAV_LINKS, SITE } from '@/lib/constants';
+import { NAV_LINKS, PHONE_TEL, SITE } from '@/lib/constants';
 import { Button } from '@/components/ui/Button';
 import { LogoImage } from '@/components/ui/LogoImage';
 import clsx from 'clsx';
@@ -51,8 +51,8 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <Button href="#contact" variant="primary" ariaLabel="Reserve a table">
-            Reserve Table
+          <Button href={PHONE_TEL} variant="primary" ariaLabel="Call to order now">
+            Order Now
           </Button>
         </div>
 
@@ -89,8 +89,8 @@ export function Header() {
                 </Link>
               ))}
               <div className="mt-3 px-4">
-                <Button href="#contact" variant="primary" ariaLabel="Reserve a table">
-                  Reserve Table
+                <Button href={PHONE_TEL} variant="primary" ariaLabel="Call to order now">
+                  Order Now
                 </Button>
               </div>
             </nav>

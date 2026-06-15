@@ -42,11 +42,19 @@ export function Button({
   );
 
   if (href) {
+    const isPhoneOrEmail = href.startsWith('tel:') || href.startsWith('mailto:');
+
     return (
       <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-        <Link href={href} className={classes} aria-label={ariaLabel}>
-          {children}
-        </Link>
+        {isPhoneOrEmail ? (
+          <a href={href} className={classes} aria-label={ariaLabel}>
+            {children}
+          </a>
+        ) : (
+          <Link href={href} className={classes} aria-label={ariaLabel}>
+            {children}
+          </Link>
+        )}
       </motion.div>
     );
   }

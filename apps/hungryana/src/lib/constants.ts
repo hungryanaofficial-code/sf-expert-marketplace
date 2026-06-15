@@ -11,6 +11,9 @@ export const SITE = {
   mapsQuery: 'Kirnahar,Birbhum,West+Bengal',
 } as const;
 
+/** Use for `href` on call-to-order buttons and phone links */
+export const PHONE_TEL = `tel:${SITE.phone.replace(/\s/g, '')}`;
+
 export const NAV_LINKS = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },

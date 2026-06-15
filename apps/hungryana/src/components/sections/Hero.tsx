@@ -7,7 +7,7 @@ import { ChevronDown, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { LogoImage } from '@/components/ui/LogoImage';
 import { IMAGES } from '@/lib/images';
-import { SITE } from '@/lib/constants';
+import { PHONE_TEL, SITE } from '@/lib/constants';
 
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -112,8 +112,8 @@ export function Hero() {
           <Button href="#full-menu" variant="primary" ariaLabel="View our menu">
             View Menu
           </Button>
-          <Button href="#contact" variant="outline" ariaLabel="Reserve a table">
-            Reserve Table
+          <Button href={PHONE_TEL} variant="outline" ariaLabel="Call to order now">
+            Order Now
           </Button>
         </motion.div>
       </div>
