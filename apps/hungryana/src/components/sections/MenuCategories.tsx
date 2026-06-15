@@ -32,8 +32,9 @@ export function MenuCategories() {
                 <Image
                   src={category.image}
                   alt={`${category.title} menu category`}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  width={800}
+                  height={533}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-charcoal-dark/50 transition-colors group-hover:bg-charcoal-dark/30" />

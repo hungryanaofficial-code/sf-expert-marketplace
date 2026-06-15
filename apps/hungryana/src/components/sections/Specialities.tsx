@@ -30,8 +30,9 @@ export function Specialities() {
                 <Image
                   src={item.image}
                   alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  width={800}
+                  height={600}
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal-dark via-charcoal-dark/40 to-transparent opacity-80 transition-opacity group-hover:opacity-90" />
