@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #111111;
+  --color-charcoal-light: #1c1c1c;
+  --color-charcoal-dark: #000000;
+  --color-gold: #ffc107;
+  --color-gold-light: #ffd54f;
+  --color-gold-dark: #ff9800;
+  --color-red: #e53935;
+  --color-red-dark: #b71c1c;
+  --color-red-maroon: #7b1414;
+  --color-orange: #ff6f00;
+  --color-cream: #fff8f0;
+  --color-warm-white: #ffffff;
+  --font-display: var(--font-bangers);
+  --font-body: var(--font-hind);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-charcoal-dark);
+  color: var(--color-cream);
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-red) 50%, transparent);
+  color: var(--color-warm-white);
+}
+
+/* Logo-inspired glass panels */
+.glass {
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 2px solid rgba(229, 57, 53, 0.35);
+}
+
+.glass-gold {
+  background: linear-gradient(
+    135deg,
+    rgba(229, 57, 53, 0.12) 0%,
+    rgba(0, 0, 0, 0.85) 50%,
+    rgba(255, 193, 7, 0.08) 100%
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 193, 7, 0.25);
+}
+
+/* Gold-to-orange gradient — matches Bengali "আনা" text */
+.text-gradient-gold {
+  background: linear-gradient(180deg, var(--color-gold-light), var(--color-gold), var(--color-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Red brand text with 3D pop — matches "HUNGRY" lettering */
+.text-brand-pop {
+  color: var(--color-red);
+  text-shadow:
+    0 1px 0 #fff,
+    0 2px 0 #fff,
+    0 3px 0 var(--color-red-dark),
+    0 4px 0 var(--color-red-dark),
+    0 5px 0 var(--color-red-maroon),
+    0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.text-shadow-brand {
+  text-shadow:
+    0 2px 0 var(--color-red-maroon),
+    0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* 3D button pop — logo sticker effect */
+.btn-pop {
+  box-shadow:
+    0 4px 0 var(--color-red-maroon),
+    0 6px 16px rgba(229, 57, 53, 0.4);
+}
+
+.btn-pop:hover {
+  box-shadow:
+    0 2px 0 var(--color-red-maroon),
+    0 4px 12px rgba(229, 57, 53, 0.5);
+  transform: translateY(2px);
+}
+
+.btn-pop-gold {
+  box-shadow:
+    0 4px 0 #c17900,
+    0 6px 16px rgba(255, 193, 7, 0.35);
+}
+
+.logo-glow {
+  filter:
+    drop-shadow(0 0 24px rgba(229, 57, 53, 0.45))
+    drop-shadow(0 0 8px rgba(255, 193, 7, 0.25))
+    drop-shadow(0 6px 16px rgba(0, 0, 0, 0.7));
+}
+
+.section-padding {
+  padding: 5rem 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 6rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 7rem 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-charcoal-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-red-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-red);
+}

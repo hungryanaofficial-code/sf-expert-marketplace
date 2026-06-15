@@ -1,0 +1,21 @@
+{
+  "name": "sf-expert-marketplace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Salesforce Expert Marketplace Platform — MVP",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev -w @sf/api\" \"npm run dev -w @sf/web\"",
+    "dev:web": "npm run dev -w @sf/web",
+    "dev:hungryana": "npm run dev -w @hungryana/web",
+    "dev:api": "npm run dev -w @sf/api",
+    "build": "npm run build -w @sf/shared && npm run build -w @sf/api && npm run build -w @sf/web",
+    "lint": "npm run lint -w @sf/web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
