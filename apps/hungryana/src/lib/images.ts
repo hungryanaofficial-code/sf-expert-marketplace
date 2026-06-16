@@ -11,11 +11,13 @@ export const IMAGES = {
   butterChicken: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80',
   hakkaNoodles: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80',
   chowmein: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800&q=80',
-  mughlai: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&q=80',  pasta: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&q=80',
+  mughlai: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&q=80',
+  pasta: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&q=80',
   mocktail: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?w=800&q=80',
   dessert: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&q=80',
   interior: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
-  indian: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&q=80',  chinese: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80',
+  indian: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=800&q=80',
+  chinese: 'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&q=80',
   about: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80',
 } as const;
 
