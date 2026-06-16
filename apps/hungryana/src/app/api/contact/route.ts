@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { prisma } from '@/lib/db';
+import { appendContactMessage } from '@/lib/google-sheets';
 
 type ContactPayload = {
   name?: unknown;
@@ -45,7 +45,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: parsed.error }, { status: 400 });
     }
 
-    await prisma.contactMessage.create({ data: parsed.data });
+    await appendContactMessage(parsed.data);
 
     return NextResponse.json({ ok: true });
   } catch (error) {
