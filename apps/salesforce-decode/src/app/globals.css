@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3658F5;
+  --color-primary-dark: #2845d4;
+  --color-primary-light: #5a76f7;
+  --color-secondary: #111111;
+  --color-sf-blue: #00A1E0;
+  --color-sf-accent: #0176D3;
+  --color-surface: #f8fafc;
+  --color-surface-dark: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-muted: #64748b;
+  --font-display: var(--font-poppins);
+  --font-body: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(180deg, #f8faff 0%, #ffffff 40%, #f5f9ff 100%);
+  background-attachment: fixed;
+  color: var(--color-secondary);
+  font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-primary) 25%, transparent);
+  color: var(--color-secondary);
+}
+
+/* Logo-inspired blue gradient utilities */
+.text-gradient {
+  background: linear-gradient(135deg, #3658F5 0%, #00A1E0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-brand {
+  background: linear-gradient(135deg, #3658F5 0%, #4a6cf7 50%, #00A1E0 100%);
+}
+
+.bg-gradient-hero {
+  background: linear-gradient(
+    160deg,
+    rgba(54, 88, 245, 0.06) 0%,
+    rgba(255, 255, 255, 1) 35%,
+    rgba(0, 161, 224, 0.05) 70%,
+    rgba(54, 88, 245, 0.04) 100%
+  );
+}
+
+.bg-gradient-card {
+  background: linear-gradient(
+    135deg,
+    rgba(54, 88, 245, 0.04) 0%,
+    rgba(0, 161, 224, 0.06) 100%
+  );
+}
+
+.bg-gradient-section {
+  background: linear-gradient(180deg, rgba(248, 250, 255, 0.8) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.section-padding {
+  padding: 4rem 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 5rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 6rem 2rem;
+  }
+}
+
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px -8px rgba(54, 88, 245, 0.18);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #3658F5, #00A1E0);
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

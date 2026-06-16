@@ -12,7 +12,7 @@ Complete guide from local development → GitHub → live site at **https://hung
 | Production build | Run `npm run build` in this folder |
 | SEO | sitemap.xml, robots.txt, JSON-LD, OG/Twitter tags |
 | WhatsApp button | Floating green button (bottom-right) |
-| Contact form | Opens email app via `mailto:` to hungryana.official@gmail.com |
+| Contact form | ✅ Saves to Google Sheet (see `GOOGLE_SHEETS_SETUP.md`) |
 | Favicon | Generated via `app/icon.tsx` |
 | Deploy target | **Vercel** (recommended) |
 
@@ -222,8 +222,8 @@ https://dnschecker.org → search `hungryana.com`
 | Full menu with prices | ✅ |
 | Gallery + lightbox | ✅ |
 | Testimonials carousel | ✅ |
-| Contact form | ✅ (mailto) |
-| QR Menu section | ✅ (add production PNG) |
+| Contact form | ✅ (Google Sheet — set `GOOGLE_SHEETS_WEBHOOK_URL` on Vercel) |
+| QR Menu section | ✅ Production PNG deployed |
 | Email display | ✅ hungryana.official@gmail.com |
 | Google Maps | ✅ Kirnahar embed |
 | Mobile navigation | ✅ |
@@ -275,7 +275,8 @@ https://dnschecker.org → search `hungryana.com`
 [ ] Search Console sitemap submitted
 [ ] Test on mobile (Android + iPhone)
 [ ] WhatsApp order flow tested
-[ ] Contact email tested
+[ ] GOOGLE_SHEETS_WEBHOOK_URL set on Vercel (see GOOGLE_SHEETS_SETUP.md)
+[ ] Contact form tested (message appears in Google Sheet)
 ```
 
 ---
