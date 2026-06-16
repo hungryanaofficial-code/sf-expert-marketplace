@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" fill="white"/>
+  <!-- Top-left quarter circle -->
+  <path d="M0 0 H60 V60 A60 60 0 0 0 0 0 Z" fill="#3658F5"/>
+  <!-- Top-right full circle -->
+  <circle cx="90" cy="30" r="22" fill="#3658F5"/>
+  <!-- Bottom-left full circle -->
+  <circle cx="30" cy="90" r="22" fill="#3658F5"/>
+  <!-- Bottom-right quarter circle -->
+  <path d="M120 120 H60 V60 A60 60 0 0 1 120 120 Z" fill="#3658F5"/>
+</svg>

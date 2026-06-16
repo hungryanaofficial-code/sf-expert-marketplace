@@ -11,6 +11,7 @@
     "dev": "concurrently \"npm run dev -w @sf/api\" \"npm run dev -w @sf/web\"",
     "dev:web": "npm run dev -w @sf/web",
     "dev:hungryana": "npm run dev -w @hungryana/web",
+    "dev:decode": "npm run dev -w @salesforce-decode/web",
     "dev:api": "npm run dev -w @sf/api",
     "build": "npm run build -w @sf/shared && npm run build -w @sf/api && npm run build -w @sf/web",
     "lint": "npm run lint -w @sf/web"
